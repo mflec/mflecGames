@@ -1,0 +1,269 @@
+* {
+    box-sizing: inherit;
+}
+
+#img-game {
+    width: 80rem;
+    margin-top: 20rem;
+    margin-left: 23rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background: linear-gradient(black, black, black, #000099, #66c2ff, #ffcccc, #ffeee6);
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+#home{
+    margin-top: 20rem;
+}
+
+#add {
+    justify-content: center;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 10rem 30rem 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(221, 186, 238, 0.959);
+}
+
+#add-form {
+    background: rgba(65, 50, 87, 0.623);
+    padding: 2.5rem 0.625rem;
+    border-radius: 0.6rem;
+}
+
+@media (min-width: 480px) {
+    form {
+        padding: 2.5rem;
+    }
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#image-submit {
+    border: 1px solid transparent;
+}
+
+input {
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+}
+
+.nav {
+    height: 90px;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url(./logo.png);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+    .nav {
+        justify-content: center;
+    }
+    .nav-list {
+        margin: 0 1rem;
+    }
+}
+
+#submit {
+    margin-top: 2rem;
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #ffcccc;
+    color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+}
+
+.nav-list a:hover {
+    background: rgba(221, 186, 238, 0.959);
+    color: rgb(26, 4, 41);
+}
+
+.image-gameCard {
+    width: 20.9rem;
+}
+
+.gameCard {
+    border: 1px;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 5px;
+    display: inline-block;
+    width: 21rem;
+    margin: 2rem;
+    padding: 0rem, 0rem;
+    color: #000;
+    text-align: center;
+    height: auto;
+    background-color: rgba(221, 186, 238, 0.589);
+}
+
+#game-cards {
+    margin-top: 10rem;
+    width: 100%;
+    align-items: center;
+}
+
+.games-container {
+    width: 100%;
+    align-items: center;
+}
+
+#seegames {
+    font-size: 2.7rem;
+    width: 10rem;
+    height: 3.3rem;
+    background-color: rgb(174, 151, 204);
+    border-color: rgb(234, 199, 241);
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-name: bottoms;
+}
+
+#nav-buttons {
+    margin-top: 2rem;
+    margin-right: 65rem;
+}
+
+#next,
+#back, .pageButton {
+    font-size: 2rem;
+    padding: 1.5rem;
+    width: auto;
+    color: #200427;
+    text-align: center;
+    margin-right: 2rem;
+    background-color: transparent;
+    height: 4rem;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-name: bottoms;
+}
+
+footer{
+    text-align:center;
+}
+
+@keyframes bottoms {
+    20% {
+        background-color: rgb(148, 118, 189);
+    }
+    40% {
+        background-color: rgb(77, 61, 100);
+        color: #ffcccc;
+    }
+    60% {
+        background-color: rgb(65, 50, 87);
+        color: #ffcccc;
+    }
+    80% {
+        background-color: rgb(26, 21, 32);
+        color: #ffcccc;
+    }
+}
+
+
+#genres, #order, #orderRating, #origin{
+    margin-right: 5rem;
+    width: 10rem;
+}
+
+.filters-sort{
+    margin-top: 5rem;
+    margin-left: 7rem;
+    display: flex;
+    color: rgba(221, 186, 238, 0.959);
+    width: 100%;
+}
+
+#filters{
+    margin-top: 10rem;
+}
+
+
+#searchname{
+    margin-left: 37rem;
+    width: 40rem;
+    height: 3rem;
+    background-color: black;
+    color: rgba(221, 186, 238, 0.959);
+    border-color: rgba(221, 186, 238, 0.959);
+}
+
+#searchbutton{
+    height: 3rem;
+    color: black;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-name: bottoms;
+    background-color: rgba(221, 186, 238, 0.959);
+    border-radius: 1rem;
+}
