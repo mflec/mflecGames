@@ -4,9 +4,8 @@ import './styles/App.css';
 import Nav from "./components/Nav";
 import Videogame from "./views/Videogame";
 import Add from "./views/Add";
-import Videogames from "./views/Videogames";
-import VideogamesPages from "./views/VideogamesPages";
 import LandingPage from "./views/LandingPage";
+import Error404 from "./views/Error404";
 
 
 function App() {
@@ -14,14 +13,12 @@ function App() {
     <div>
       <div className="container content">
         <Switch>
-      <Route exact path="/" component={LandingPage} />
-      <Nav/>
-      </Switch>
-        <Route path="/home" exact component={Home} />
-        <Route path="/videogame" exact component={Add} />
-        <Route path="/videogame/:idGame"  exact component={Videogame} />
-        <Route path="/videogames" exact component={Videogames} />
-        <Route path="/videogames/:page" exact component={VideogamesPages} />
+      <Route exact path="/" component={LandingPage}/>
+        <Route path="/home" exact component={Home}/>
+        <Route path="/videogame" exact component={Add}/>
+        <Route path="/videogame/:idGame"  exact component={Videogame}/>
+        <Route path="*" component={Error404} />
+        </Switch>
       </div>
     </div>
   );

@@ -5,9 +5,6 @@ import { useSelector } from "react-redux";
 import GameCard from "./GameCard"
 
 export default function Search() {
-  const videogames = useSelector((state) => state.videogames);
-  const videogamesToShow = useSelector((state) => state.videogamesToShow);
-
   let dispatch = useDispatch()
   let [input, setInput] = React.useState({ name: "" })
   function handleChange(e) {
@@ -18,8 +15,6 @@ export default function Search() {
     dispatch(getVideogamesByName(input.name))
   }
   let {name} = input.name
-
-  let toShow= videogamesToShow? videogamesToShow: videogames
 
   return (<div> 
         <form onSubmit={(e) => handleSubmit(e)}>
@@ -32,14 +27,5 @@ export default function Search() {
               onChange={(e) => handleChange(e)}/>
           <button type="submit" id="searchbutton">BUSCAR</button>
         </form>
-        <div>
-        {toShow.map((videogame) =>
-      (<GameCard
-        id={videogame.id}
-        name={videogame.name}
-        image={videogame.image}
-        genres={videogame.genres}
-      />))}
-        </div>
   </div>)
 }

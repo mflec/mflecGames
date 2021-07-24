@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch} from 'react-redux';
-import { filterByGenres, filterByOrigin} from '../actions/filters'
+import { filterByGenres} from '../actions/filters'
 import { sortByAlphabet, sortByRating } from '../actions/sorts'
 
 function Filters() {
@@ -9,10 +9,6 @@ function Filters() {
     function handleFilterGenre(e) {
         e.preventDefault()
         dispatch(filterByGenres(e.target.value));
-    }
-    function handleFilterOrigin(e) {
-        e.preventDefault()
-            dispatch(filterByOrigin(e.target.value));
     }
     function handleAlphabet(e) {
         e.preventDefault()
@@ -28,8 +24,8 @@ function Filters() {
             <div>
                 <label htmlFor="genres">
                     <span>Filter by Genres </span>
-                </label>
-                <select id='genres' onChange={(e) => handleFilterGenre(e)}>
+                
+                <select id='genres' onChange={(e) => handleFilterGenre(e)} className="box">
                     <option value="All games">All games</option>
                     <option value="Action">Action</option>
                     <option value="Indie">Indie</option>
@@ -51,16 +47,7 @@ function Filters() {
                     <option value="Educational">Educational</option>
                     <option value="Card">Card</option>
                 </select>
-            </div>
-            <div>
-            <label htmlFor="origin">
-                    <span>Filter by Origin </span>
                 </label>
-            <select id="origin" onChange={(e)=> handleFilterOrigin(e)}>
-                <option value="All games">All games</option>
-                <option value="local"> Local games</option> 
-                <option value="external"> External games</option> 
-            </select>
             </div>
             <div>
                 <label htmlFor="order">

@@ -62,7 +62,8 @@ router.get('/', async (req, res) => {
       image: game.background_image,
       rating: game.rating,
       platforms: game.platforms,
-      genres: game.genres
+      genres: game.genres,
+      added: game.added
     }));
 
     totalGames = await [...localGames, ...externalGames]
@@ -99,9 +100,7 @@ router.get('/:page', async (req, res) => {
       genres: game.genres
     }));
 
-    remainingGames = [...remainingGames, ...externalGames];
-    let returnedGames = remainingGames.slice(0, 15);
-    remainingGames = remainingGames.slice(15, remainingGames.length);
+    returnedGames = externalGames.slice(0, 15)
     return res.json(returnedGames);
   } catch (error) {
     return res.status(404);

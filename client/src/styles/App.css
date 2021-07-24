@@ -41,7 +41,7 @@ body {
 }
 
 #home{
-    margin-top: 20rem;
+    margin-top: 13rem;
 }
 
 #add {
@@ -155,9 +155,8 @@ input {
     border: 1px;
     border-style: solid;
     border-color: #000;
-    border-radius: 5px;
     display: inline-block;
-    width: 21rem;
+    width: 22rem;
     margin: 2rem;
     padding: 0rem, 0rem;
     color: #000;
@@ -209,7 +208,7 @@ input {
 }
 
 footer{
-    text-align:center;
+    text-align: center;
 }
 
 @keyframes bottoms {
@@ -237,8 +236,7 @@ footer{
 }
 
 .filters-sort{
-    margin-top: 5rem;
-    margin-left: 7rem;
+    margin-left: 24.8rem;
     display: flex;
     color: rgba(221, 186, 238, 0.959);
     width: 100%;
@@ -266,4 +264,47 @@ footer{
     animation-name: bottoms;
     background-color: rgba(221, 186, 238, 0.959);
     border-radius: 1rem;
+}
+
+.pagination\:number {
+    --size: 32px;
+    --margin: 6px;
+    margin: 0 var(--margin);
+    border-radius: 6px;
+    background: #cba6cc;
+    max-width: auto;
+    min-width: auto;
+    height: 3rem;
+    cursor: pointer;
+    padding: 0 6px;
+
+  }
+
+select {
+    background-color: transparent;
+    color: rgb(129, 115, 127);
+    margin-bottom: 1em;
+    padding: .25em;
+    border: 0;
+    border-bottom: 2px solid currentcolor; 
+    font-weight: bold;
+    letter-spacing: .15em;
+    border-radius: 0;
+}
+
+.body404{
+    margin-top: 30rem;
+    width: 100%;
+    text-align: center;
+}
+
+.button404{
+    height: 4rem;
+    width: 10rem;
+    border-radius: 1rem;
+    background-color: #200427;
+    color: white;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-name: bottoms;
 }

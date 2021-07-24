@@ -1,5 +1,5 @@
-import axios from "axios";
 import React from "react";
+import Nav from "../components/Nav";
 
 function Add() {
   let [values, setValues] = React.useState({
@@ -54,6 +54,8 @@ function Add() {
 
   return (
     <div id="add">
+            <Nav/>
+
       <h3>Add a videogame</h3>
       <hr />
       <form onSubmit={(e) => handleSubmit(e)}  id="add-form">

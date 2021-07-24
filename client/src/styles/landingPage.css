@@ -11,15 +11,37 @@
 }
 
 #welcome{
-	font-size: 5rem;
+	font-size: 4rem;
 	color: rgb(221, 195, 221);
+	animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-name: bottoms;
 }
 
-
 #to-click{
-	font-size: 3rem;
+	font-size: 2rem;
 	margin-bottom: 10rem;
 	color: rgb(221, 195, 221);
+	animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-name: bottoms;
+	margin-bottom: 16.5rem;
+}
+
+@keyframes bottoms {
+    20% {
+        color: rgb(148, 118, 189);
+    }
+    40% {
+        color: rgb(228, 212, 252);
+    }
+    60% {
+        color: rgb(255, 255, 255);
+
+    }
+    80% {
+		color: rgb(235, 235, 235);
+    }
 }
 
 .landingsection {
