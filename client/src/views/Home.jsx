@@ -1,52 +1,55 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import getVideogames from "../actions/getVideogames";
-import { filterByGenres } from "../actions/filters";
-import { sortByAlphabet, sortByRating } from "../actions/sorts";
 import Search from "../components/Search";
 import Filters from "../components/Filters"
 import Pages from "../components/Pages";
 import GameCard from "../components/GameCard";
 import Nav from "../components/Nav";
+import NotFound from "../components/NotFound";
+import Loanding from "../components/Loanding";
 
 
 function Home() {
   const videogames = useSelector((state) => state.videogames);
   const videogamesToShow = useSelector((state) => state.videogamesToShow);
-  const filters= useSelector((state) => state.filters)
+  const [page, setPage] = useState(1);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getVideogames());
   }, [dispatch])
 
-  const paginate = pageNumber => 
-  {
-    dispatch(getVideogames(pageNumber));
-    dispatch(filterByGenres(filters.filter));
-    dispatch(sortByAlphabet(filters.sortAlphabet));
-    dispatch(sortByRating(filters.sortRating));
-  }
+  const paginate = pageNumber => {setPage(pageNumber)}
 
   let toShow = videogamesToShow ? videogamesToShow : videogames
+  let notFound
+
+  if(videogamesToShow && videogamesToShow.length==0) notFound= true
   
   return (
     <div id="home">
       <Nav/>
       <Filters id="filters" />
-      <hr id="hrhome"/>
+      
       <Search />
+      {toShow.length===0&& !notFound? <Loanding/>: null }
       <div>
-        {toShow.map((videogame) =>
+        {notFound? <NotFound/>: null }
+        {toShow.slice(15*page-15, 15*page).map((videogame) =>
         (<GameCard
           id={videogame.id}
           name={videogame.name}
           image={videogame.image}
           genres={videogame.genres}
+          local={videogame.local}
         />))}
       </div> <hr />
       <footer>
-        <Pages paginate={paginate} />
+        {notFound? null: <Pages 
+        paginate={paginate} 
+        totalGames={toShow.length} 
+        />}
       </footer>
     </div>
   );

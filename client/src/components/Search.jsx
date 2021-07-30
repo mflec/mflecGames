@@ -1,31 +1,34 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import getVideogamesByName from "../actions/getVideogamesByName";
-import { useSelector } from "react-redux";
-import GameCard from "./GameCard"
+import getVideogames from "../actions/getVideogames";
 
 export default function Search() {
   let dispatch = useDispatch()
   let [input, setInput] = React.useState({ name: "" })
+  let { name } = input.name
+
   function handleChange(e) {
     setInput({ name: e.target.value })
+    if (!input.name) {
+      dispatch(getVideogames())
+    } else {
+      dispatch(getVideogamesByName(input.name))
+    }
   }
-  function handleSubmit(e) {
-    e.preventDefault()
-    dispatch(getVideogamesByName(input.name))
-  }
-  let {name} = input.name
-
-  return (<div> 
-        <form onSubmit={(e) => handleSubmit(e)}>
-            <input
-              name="name"
-              type="text"
-              id="searchname"
-              autoComplete="off"
-              value={name}
-              onChange={(e) => handleChange(e)}/>
-          <button type="submit" id="searchbutton">BUSCAR</button>
-        </form>
+  return (<div>
+    <form>
+      <label htmlFor="searchName" className="homeSearch">
+        search a game by name
+      </label>
+      <br/>
+      <input
+        name="name"
+        type="text"
+        id="searchname"
+        autoComplete="off"
+        value={name}
+        onChange={(e) => handleChange(e)} />
+    </form>
   </div>)
 }

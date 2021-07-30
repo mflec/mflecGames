@@ -7,8 +7,8 @@ const LandingPage = () => {
         <div className="landing-body" >
             <div>
                 <section className="landingsection">
-                <h1 id="welcome">WELCOME!</h1>
-                <h1 id="to-click">CLICK ON MARIO OR SOME BLOCK TO SEE GAMES</h1>
+                <h1 id="welcome">welcome!</h1>
+                <h1 id="to-click">click on mario or some block to see games</h1>
                     <div class="cloud1"></div>
                     <div class="cloud2"></div>
                     <ul class="group">

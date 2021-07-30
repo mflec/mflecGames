@@ -4,8 +4,11 @@
 
 #img-game {
     width: 80rem;
-    margin-top: 20rem;
-    margin-left: 23rem;
+    margin-top: 12rem;
+    margin-left: 27.3rem;
+    border-style: solid;
+    border-width: 1rem;
+    border-color: #ffcccc85;
 }
 
 html {
@@ -112,6 +115,7 @@ input {
 }
 
 .nav-list {
+    font-variant: small-caps;
     display: flex;
     margin-right: 2rem;
 }
@@ -236,10 +240,10 @@ footer{
 }
 
 .filters-sort{
-    margin-left: 24.8rem;
+    font-variant: small-caps;
+    margin-left: 24.7rem;
     display: flex;
     color: rgba(221, 186, 238, 0.959);
-    width: 100%;
 }
 
 #filters{
@@ -248,7 +252,7 @@ footer{
 
 
 #searchname{
-    margin-left: 37rem;
+    margin-left: 45rem;
     width: 40rem;
     height: 3rem;
     background-color: black;
@@ -263,7 +267,6 @@ footer{
     animation-duration: 2s;
     animation-name: bottoms;
     background-color: rgba(221, 186, 238, 0.959);
-    border-radius: 1rem;
 }
 
 .pagination\:number {
@@ -281,8 +284,8 @@ footer{
   }
 
 select {
-    background-color: transparent;
-    color: rgb(129, 115, 127);
+    background-color: #ffcccc62;
+    color: rgb(0, 0, 0);
     margin-bottom: 1em;
     padding: .25em;
     border: 0;
@@ -293,7 +296,7 @@ select {
 }
 
 .body404{
-    margin-top: 30rem;
+    margin-top: 10rem;
     width: 100%;
     text-align: center;
 }
@@ -307,4 +310,50 @@ select {
     animation-iteration-count: infinite;
     animation-duration: 2s;
     animation-name: bottoms;
+}
+
+#not-found{
+    text-align: center;
+    background-color: transparent;
+    height: auto;
+}
+
+.homeSearch{
+    margin-left: 45rem;
+    width: 40rem;
+    height: 3rem;
+    background-color: transparent;
+    color: rgba(221, 186, 238, 0.959);
+    border-color: rgba(221, 186, 238, 0.959);
+    font-size: 3.6rem;
+    font-variant: small-caps;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-name: bottoms;
+}
+
+@keyframes letters {
+    20% {
+        color: rgb(148, 118, 189);
+    }
+    40% {
+        color: rgb(77, 61, 100);
+    }
+    60% {
+        color: rgb(65, 50, 87);
+
+    }
+    80% {
+        color: rgb(26, 21, 32);
+    }
+}
+
+#fullVideogame{
+    border-radius: 0.5rem;
+    margin-top: 4rem;
+    margin-left: 27.3rem;
+    width: 80rem;
+    text-align: center;
+    background-color: #ffcccc85 ;
+    color: #000;
 }

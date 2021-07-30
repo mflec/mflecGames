@@ -12,64 +12,72 @@ function Add() {
     genres: []
   });
 
+
   function handleChange(e) {
-    if(e.target.name=="genres") {
+    if (e.target.name == "genres") {
       setValues(values => ({
         ...values,
         genres: [...values.genres, e.target.value]
       }))
-    }else if(e.target.name=="platforms"){
-      let arrayPlatforms= e.target.value.split(",")
+    } else if (e.target.name == "platforms") {
+      let arrayPlatforms = e.target.value.split(",")
       setValues(values => ({
         ...values,
         platforms: arrayPlatforms
       }))
-    } else {setValues(values => ({
-      ...values,
-      [e.target.name]: e.target.value
-    }))
-  }
+    } else {
+      setValues(values => ({
+        ...values,
+        [e.target.name]: e.target.value
+      }))
+    }
     console.log(values)
   }
 
-
   async function handleSubmit(e) {
     e.preventDefault();
-    try {
-      let config = {
-        method: "POST",
-        headers: {
+    if (!values.name) {
+      return alert("A name is required")
+    }
+    if (!values.description) {
+      return alert("A description is required")
+    }
+    if (!values.platforms) {
+      return alert("Successfully created videogame")
+    }else {
+      try {
+        let config = {
+          method: "POST",
+          headers: {
             "Accept": "Application/json",
             "Content-Type": "application/json"
-        },
-        body: JSON.stringify(values)
-    }
-    let res = await fetch("http://localhost:3005/videogame", config)
-    let json = await res.json()
-    console.log(json)
-    } catch (error) {
-      console.log(error)
+          },
+          body: JSON.stringify(values)
+        }
+        let res = await fetch("http://localhost:3005/videogame", config)
+        return alert("The genres are required")
+      } catch (error) {
+        console.log(error)
+      }
     }
   }
-
   return (
     <div id="add">
-            <Nav/>
-
-      <h3>Add a videogame</h3>
+      <Nav />
+      <h3>ADD A VIDEOGAME</h3>
       <hr />
-      <form onSubmit={(e) => handleSubmit(e)}  id="add-form">
+      <form onSubmit={(e) => handleSubmit(e)} id="add-form">
         <div >
           <label htmlFor="name" required>
-            Name (*)
+            Name (*) 
           </label>
-          <input onChange={(e) => handleChange(e)} value={values.name} name="name" type="text" className="form-control" required />
+          <input onChange={(e) => handleChange(e)} value={values.name} name="name" type="text" className="form-control" />
         </div>
         <div >
           <label htmlFor="description" required>
             Description (*)
           </label>
-          <input onChange={(e) => handleChange(e)} value={values.description} name="description" type="text" className="form-control" required />
+          <input onChange={(e) => handleChange(e)} value={values.description} name="description" type="text" className="form-control"  />
         </div>
         <div >
           <label htmlFor="dateToRelase" >
@@ -87,11 +95,11 @@ function Add() {
           <label htmlFor="platforms">
             Platforms (*)
           </label>
-          <textarea onChange={(e) => handleChange(e)} value={values.plataforms} name="platforms" className="form-control" required></textarea>
+          <textarea onChange={(e) => handleChange(e)} value={values.plataforms} name="platforms" className="form-control" ></textarea>
         </div>
         <div >
           <label htmlFor="genres">
-            <span>Genres (*) (to select genres, hold down the ctrl key)</span>
+            <span>Genre(s)</span>
           </label>
           <select onChange={(e) => handleChange(e)} name="genres" id='genres' multiple>
             <option value="4">Action</option>

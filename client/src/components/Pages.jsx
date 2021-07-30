@@ -1,15 +1,14 @@
 import React from "react";
 
-function Pages({ paginate }) {
-    let start = 1;
+function Pages({ paginate, totalGames }) {
     let pageNumbers = [];
-    let end = start + 8
-    for (let i = start; i <= end; i++) {
+    for (let i = 1; i <= Math.ceil(totalGames / 15); i++) {
         pageNumbers.push(i)
     }
+
     return (
         <div>
-            {pageNumbers.map(n => (
+            {pageNumbers<2? null : pageNumbers.map(n => (
                 <button onClick={() => paginate(n)} className="pagination:number" key={n}>
                     {n}
                 </button>

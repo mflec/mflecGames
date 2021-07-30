@@ -13,8 +13,7 @@ conn.sync({ alter: true }).then(() => {
         let apiGenres = await axios.get(`${RAWG_GENRES}?key=${KEY}`);
         apiGenres = await apiGenres.data.results.map(genre => Genre.create({
         name: genre.name,
-         id: genre.id,
-         image: image_background
+         id: genre.id
         }));*/
         console.log(`Listening in port ${PORT}`)
     })

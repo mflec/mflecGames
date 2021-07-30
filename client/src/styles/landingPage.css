@@ -11,21 +11,22 @@
 }
 
 #welcome{
+	font-size: 5rem;
+	color: rgb(221, 195, 221);
+	animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-name: bottoms;
+	font-variant: small-caps;
+}
+
+#to-click{
 	font-size: 4rem;
 	color: rgb(221, 195, 221);
 	animation-iteration-count: infinite;
     animation-duration: 1s;
     animation-name: bottoms;
-}
-
-#to-click{
-	font-size: 2rem;
 	margin-bottom: 10rem;
-	color: rgb(221, 195, 221);
-	animation-iteration-count: infinite;
-    animation-duration: 1s;
-    animation-name: bottoms;
-	margin-bottom: 16.5rem;
+	font-variant: small-caps;
 }
 
 @keyframes bottoms {

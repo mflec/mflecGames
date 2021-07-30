@@ -5,20 +5,13 @@ const axios = require('axios').default;
 const RAWGGAMES = `https://api.rawg.io/api/games`;
 const KEY = `0a54940f8789456aa6d405ce652df399`;
 
-let remainingGames = [];
-
 router.get('/', async (req, res) => {
   const { name } = req.query;
   try {
-    let callApi;
-    let externalGames;
-    let localGames;
-    let totalGames;
-    let returnedGames;
     if (name) {
-      callApi = await axios.get(`${RAWGGAMES}?key=${KEY}&search=${name}`);
-      externalGames = await callApi.data.results
-      localGames = await Videogame.findAll({
+      let callApi = await axios.get(`${RAWGGAMES}?key=${KEY}&search=${name}`);
+      let externalGames = await callApi.data.results
+      let localGames = await Videogame.findAll({
         where: {
           name: name
         },
@@ -33,18 +26,39 @@ router.get('/', async (req, res) => {
         image: game.background_image,
         rating: game.rating,
         platforms: game.platforms,
-        genres: game.genres
+        genres: game.genres,
+        local: false
       }));
 
-      totalGames = await [...localGames, ...externalGames]
-      returnedGames = totalGames.slice(0, 15)
+      let totalGames = await [...localGames, ...externalGames]
+      let returnedGames= totalGames.slice(0,15)
       return res.json(returnedGames);
     };
 
+    let callApi1 = await axios.get(`${RAWGGAMES}?key=${KEY}`);
+    let callApi2 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=2`);
+    let callApi3 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=3`);
+    let callApi4 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=4`);
+    let callApi5 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=5`);
+    let callApi6 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=6`);
+    let callApi7 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=7`);
+    let callApi8 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=8`);
+    let callApi9 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=9`);
+    let callApi10 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=10`);
 
 
-    callApi = await axios.get(`${RAWGGAMES}?key=${KEY}`);
-    externalGames = await callApi.data.results
+    externalGames = await [
+      ...callApi1.data.results, 
+      ...callApi2.data.results, 
+      ...callApi3.data.results,
+      ...callApi4.data.results, 
+      ...callApi5.data.results, 
+      ...callApi6.data.results, 
+      ...callApi7.data.results, 
+      ...callApi8.data.results, 
+      ...callApi9.data.results, 
+      ...callApi10.data.results
+    ]
     localGames = await Videogame.findAll({
       include: {
         model: Genre,
@@ -63,49 +77,16 @@ router.get('/', async (req, res) => {
       rating: game.rating,
       platforms: game.platforms,
       genres: game.genres,
-      added: game.added
+      added: game.added,
+      local: false
     }));
 
     totalGames = await [...localGames, ...externalGames]
-    returnedGames = totalGames.slice(0, 15)
-    return res.json(returnedGames);
+    return res.json(totalGames);
 
   } catch (error) {
     return res.status(404)
   };
 });
-
-
-
-router.get('/:page', async (req, res) => {
-  let { page } = req.params;
-  if (page <= 1) return res.redirect('/videogames');
-  try {
-    if (remainingGames>=15) {
-      let returnedGames = remainingGames.slice(0, 15);
-      remainingGames = remainingGames.slice(15, remainingGames.length);
-      return res.json(returnedGames);
-    }
-    
-    let callApi = await axios.get(`${RAWGGAMES}?key=${KEY}&page=${page}`);
-    let externalGames = await callApi.data.results;
-
-    externalGames = await externalGames && externalGames.map(game => ({
-      id: game.id,
-      name: game.name,
-      dateToRelase: game.released,
-      image: game.background_image,
-      rating: game.rating,
-      platforms: game.platforms,
-      genres: game.genres
-    }));
-
-    returnedGames = externalGames.slice(0, 15)
-    return res.json(returnedGames);
-  } catch (error) {
-    return res.status(404);
-  };
-});
-
 
 module.exports = router;

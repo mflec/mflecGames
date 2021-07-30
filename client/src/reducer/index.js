@@ -15,11 +15,6 @@ let initialState = {
     videogames: [],
     videogame: {},
     videogamesToShow: null,
-    filters: {
-        filter: "All games",
-        sortAlphabet: "Default",
-        sortRating: "Default"
-    },
     genres: []
 };
 
@@ -43,73 +38,71 @@ export default function reducer(state = initialState, { type, payload }) {
             };
         case FILTER_BY_GENRES: {
             if (payload === "All games") return {
-                ...state, 
-                videogamesToShow: null,
-                filters: {
-                    ...state.filters, 
-                    sortAlphabet: payload
-                }
+                ...state,
+                videogamesToShow: null
             };
             return {
                 ...state,
-                videogamesToShow: state.videogames.filter(e => e.genres.map((genre) => (genre.name)).includes(payload)),
-                filters: {
-                    ...state.filters, 
-                    filter: payload
-                }
+                videogamesToShow: state.videogames.filter(e => e.genres.map((genre) => (genre.name)).includes(payload))
             };
         };
         case SORT_BY_ALPHABET: {
-            if (payload === "Default")  return { 
-                ...state, 
-                videogames: [...state.videogames].sort((a, b) => a.added < b.added ? 1 : -1),
-                filters: {
-                    ...state.filters, 
-                    sortAlphabet: payload
-                }
-            };
-            if (payload === "az") return { 
-                ...state, 
-                videogames: [...state.videogames].sort((game1, game2) => game1.name > game2.name ? 1 : -1),
-                filters: {
-                    ...state.filters, 
-                    sortAlphabet: payload
-                }
-            };
-            return { 
-                ...state, 
-                videogames: [...state.videogames].sort((game1, game2) => game1.name > game2.name ? -1 : 1),
-                filters: {
-                    ...state.filters, 
-                    sortAlphabet: payload
-                }
-             };
+            if (state.videogamesToShow) {
+                if (payload === "Default") return {
+                    ...state,
+                    videogamesToShow: [...state.videogamesToShow].sort((a, b) => a.added < b.added ? 1 : -1)
+                };
+                if (payload === "az") return {
+                    ...state,
+                    videogamesToShow: [...state.videogamesToShow].sort((game1, game2) => game1.name > game2.name ? 1 : -1)
+                };
+                return {
+                    ...state,
+                    videogamesToShow: [...state.videogamesToShow].sort((game1, game2) => game1.name > game2.name ? -1 : 1)
+                };
+            } else {
+                if (payload === "Default") return {
+                    ...state,
+                    videogames: [...state.videogames].sort((a, b) => a.added < b.added ? 1 : -1)
+                };
+                if (payload === "az") return {
+                    ...state,
+                    videogames: [...state.videogames].sort((game1, game2) => game1.name > game2.name ? 1 : -1)
+                };
+                return {
+                    ...state,
+                    videogames: [...state.videogames].sort((game1, game2) => game1.name > game2.name ? -1 : 1)
+                };
+            }
         };
         case SORT_BY_RATING: {
-            if (payload === "Default")  return { 
-                ...state, 
-                videogames: [...state.videogames].sort((a, b) => a.added < b.added ? 1 : -1),
-                filters: {
-                    ...state.filters, 
-                    sortAlphabet: payload
-                } 
-            };
-            if (payload === "high") return { 
-                ...state, 
-                videogames: [...state.videogames].sort((game1, game2) => game1.rating > game2.rating ? -1 : 1),
-                filters: {
-                    ...state.filters, 
-                    sortAlphabet: payload
-                }
-            };
-            return { 
-                ...state, 
-                videogames: [...state.videogames].sort((game1, game2) => game1.rating > game2.rating ? 1 : -1),
-                filters: {
-                    ...state.filters, 
-                    sortRating: payload
-                }
-             };
+            if (state.videogamesToShow) {
+                if (payload === "Default") return {
+                    ...state,
+                    videogamesToShow: [...state.videogamesToShow].sort((a, b) => a.added < b.added ? 1 : -1)
+                };
+                if (payload === "high") return {
+                    ...state,
+                    videogamesToShow: [...state.videogamesToShow].sort((game1, game2) => game1.rating > game2.rating ? -1 : 1)
+                };
+                return {
+                    ...state,
+                    videogamesToShow: [...state.videogamesToShow].sort((game1, game2) => game1.rating > game2.rating ? 1 : -1)
+                };
+            } else {
+                if (payload === "Default") return {
+                    ...state,
+                    videogames: [...state.videogames].sort((a, b) => a.added < b.added ? 1 : -1)
+                };
+                if (payload === "high") return {
+                    ...state,
+                    videogames: [...state.videogames].sort((game1, game2) => game1.rating > game2.rating ? -1 : 1)
+                };
+                return {
+                    ...state,
+                    videogames: [...state.videogames].sort((game1, game2) => game1.rating > game2.rating ? 1 : -1)
+                };
+            }
         };
         default:
             return state;

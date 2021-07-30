@@ -17,7 +17,6 @@ function Filters() {
     function handleRating(e) {
         e.preventDefault()
             dispatch(sortByRating(e.target.value));
-
     }
     return (
         <div className="filters-sort">
