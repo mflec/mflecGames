@@ -2,15 +2,6 @@
     box-sizing: inherit;
 }
 
-#img-game {
-    width: 80rem;
-    margin-top: 12rem;
-    margin-left: 27.3rem;
-    border-style: solid;
-    border-width: 1rem;
-    border-color: #000000c4;
-}
-
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -389,6 +380,15 @@ select {
     }
 }
 
+#img-game {
+    width: 80rem;
+    margin-top: 12rem;
+    margin-left: 27.3rem;
+    border-style: solid;
+    border-width: 1rem;
+    border-color: #000000c4;
+}
+
 #fullVideogame{
     border-radius: 0.1rem;
     margin-top: 4rem;
@@ -397,4 +397,19 @@ select {
     text-align: center;
     background-color: #000000c4 ;
     color: rgb(233, 209, 245);
+}
+
+@media (max-width: 28.75em) {
+    #img-game {
+        width: 100%;
+        margin-top: 12rem;
+        margin-left: 0rem;
+        border-width: 0.3rem;
+    }
+    #fullVideogame{
+        border-radius: 0rem;
+        margin-top: 2rem;
+        margin-left: 0rem;
+        width: 100%;
+    }
 }
