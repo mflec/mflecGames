@@ -2,7 +2,6 @@
 import {
     SET_VIDEOGAME,
     SET_VIDEOGAMES,
-    SET_GENRES, //FILTERS
     FILTER_BY_GENRES,
     SORT_BY_RATING, //SORTS
     SORT_BY_ALPHABET
@@ -30,11 +29,6 @@ export default function reducer(state = initialState, { type, payload }) {
             return {
                 ...state,
                 videogame: payload
-            };
-        case SET_GENRES:
-            return {
-                ...state,
-                genres: payload
             };
         case FILTER_BY_GENRES: {
             if (payload === "All games") return {
