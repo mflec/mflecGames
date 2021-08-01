@@ -35,7 +35,7 @@ export default function Videogame() {
 
 return (<div >
         <Nav/>
-    {videogame.image? <img src={videogame.image} id="img-game"/> : null}
+    {videogame.image? <img src={videogame.image} id="img-game" alt="descriptive image of the game"/> : null}
         <div id="fullVideogame">
     <h2>{videogame.name}</h2>
     <h3> Genre(s): </h3> <p>{videogame.genres? stringGenres : "Undefined" }</p>
