@@ -54,8 +54,8 @@ function Add() {
           },
           body: JSON.stringify(values)
         }
-        let res = await fetch("/videogame", config)
-        return alert("The genres are required")
+        let res = await fetch("https://henrygames-by-mflec.herokuapp.com/videogame", config)
+        return alert("Created videogame")
       } catch (error) {
         console.log(error)
       }
