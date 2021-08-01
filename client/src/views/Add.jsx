@@ -14,6 +14,7 @@ function Add() {
 
 
   function handleChange(e) {
+    e.preventDefault();
     if (e.target.name == "genres") {
       setValues(values => ({
         ...values,
@@ -31,7 +32,6 @@ function Add() {
         [e.target.name]: e.target.value
       }))
     }
-    console.log(values)
   }
 
   async function handleSubmit(e) {
@@ -54,7 +54,7 @@ function Add() {
           },
           body: JSON.stringify(values)
         }
-        let res = await fetch("https://henrygames-by-mflec.herokuapp.com/videogame", config)
+        await fetch("https://henrygames-by-mflec.herokuapp.com/videogame", config)
         return alert("Created videogame")
       } catch (error) {
         console.log(error)
