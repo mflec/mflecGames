@@ -269,6 +269,13 @@ footer{
     border-color: rgba(221, 186, 238, 0.959);
 }
 
+@media (max-width: 28.75em) {
+    #searchname {
+        margin-left: 0rem;
+    }
+}
+
+
 #searchbutton{
     height: 3rem;
     color: black;
