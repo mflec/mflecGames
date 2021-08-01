@@ -4,6 +4,7 @@ import getVideogame from "../actions/getVideogame";
 import { useDispatch, useSelector } from "react-redux";
 import clearVideogame from "../actions/clearVideogame";
 import Nav from "../components/Nav";
+import Loanding from "../components/Loanding";
 
 export default function Videogame() {
   const videogame = useSelector((state) => state.videogame);
@@ -36,6 +37,7 @@ export default function Videogame() {
 return (<div >
         <Nav/>
     {videogame.image? <img src={videogame.image} id="img-game" alt="descriptive image of the game"/> : null}
+        {videogame? <Loanding/>:  
         <div id="fullVideogame">
     <h2>{videogame.name}</h2>
     <h3> Genre(s): </h3> <p>{videogame.genres? stringGenres : "Undefined" }</p>
@@ -43,6 +45,6 @@ return (<div >
     {videogame.dateToRelase? <h3>Release date: {videogame.dateToRelase}</h3>: null }
     {videogame.rating?<h3>Rating: {videogame.rating}</h3>: null }
     <h5>Platform(s): </h5> <p>{videogame.platforms? stringPlatforms: "Undefined"}</p>
-    </div>
+    </div>}
   </div>);
 };
