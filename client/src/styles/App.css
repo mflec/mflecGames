@@ -172,6 +172,17 @@ input {
     background-color: rgba(0, 0, 0, 0.664)
 }
 
+@media (max-width: 28.75em) {
+    .gameCard {
+        width: 28.749rem;
+        margin-left: 5rem;
+    }
+    .image-gameCard {
+        width: 28.74rem;
+    }
+}
+
+
 .gameCard:hover{
     background-color: rgba(0, 0, 0);
     color: white;
@@ -250,7 +261,7 @@ footer{
 
 .filters-sort{
     font-variant: small-caps;
-    margin-left: 24.7rem;
+    margin-left: 35rem;
     display: flex;
     color: rgba(221, 186, 238, 0.959);
 }
@@ -259,27 +270,56 @@ footer{
     margin-top: 10rem;
 }
 
+#orderRating, #order, #genres{
+    height: 1rem;
+    width: 2rem;
+}
 
-@media (min-width: 28.75em) {
-    #searchname{
-        margin-left: 45rem;
-        width: 40rem;
-        height: 3rem;
-        background-color: black;
+@media (max-width: 28.75em) {
+    .filters-sort {
+        font-size: 2rem;
+        font-variant: small-caps;
+        margin-left: 2.7rem;
         color: rgba(221, 186, 238, 0.959);
-        border-color: rgba(221, 186, 238, 0.959);
+    }
+
+}
+
+#searchname{
+    margin-left: 45rem;
+    width: 40rem;
+    height: 3rem;
+    background-color: black;
+    color: rgba(221, 186, 238, 0.959);
+    border-color: rgba(221, 186, 238, 0.959);
+}
+
+.homeSearch{
+    margin-left: 45rem;
+    width: 40rem;
+    height: 3rem;
+    font-size: 3.6rem;
+    background-color: transparent;
+    color: rgba(221, 186, 238, 0.959);
+    border-color: rgba(221, 186, 238, 0.959);
+    font-variant: small-caps;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-name: bottoms;
+}
+
+@media (max-width: 28.75em) {
+    #searchname{
+        margin-left: 3rem;
+        width: 34rem;
+        height: 3;
+    }
+    .homeSearch{
+        margin-left: 3rem;
+        font-size: 3.06rem;
     }
 }
 
-
-#searchbutton{
-    height: 3rem;
-    color: black;
-    animation-iteration-count: infinite;
-    animation-duration: 2s;
-    animation-name: bottoms;
-    background-color: rgba(221, 186, 238, 0.959);
-}
 
 .pagination\:number {
     --size: 32px;
@@ -331,20 +371,6 @@ select {
     text-align: center;
     background-color: transparent;
     height: auto;
-}
-
-.homeSearch{
-    margin-left: 45rem;
-    width: 40rem;
-    height: 3rem;
-    background-color: transparent;
-    color: rgba(221, 186, 238, 0.959);
-    border-color: rgba(221, 186, 238, 0.959);
-    font-size: 3.6rem;
-    font-variant: small-caps;
-    animation-iteration-count: infinite;
-    animation-duration: 0.5s;
-    animation-name: bottoms;
 }
 
 @keyframes letters {

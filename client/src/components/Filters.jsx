@@ -23,7 +23,6 @@ function Filters() {
             <div>
                 <label htmlFor="genres">
                     <span>Filter by Genres </span>
-                
                 <select id='genres' onChange={(e) => handleFilterGenre(e)} className="box">
                     <option value="All games">All games</option>
                     <option value="Action">Action</option>

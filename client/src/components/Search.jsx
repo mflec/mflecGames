@@ -16,6 +16,7 @@ export default function Search() {
       dispatch(getVideogamesByName(input.name))
     }
   }
+  
   return (<div>
     <form>
       <label htmlFor="searchName" className="homeSearch">
