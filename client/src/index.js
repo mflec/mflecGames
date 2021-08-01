@@ -10,8 +10,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-axios.defaults.baseURL= process.env.REACT_APP_API || "http://localhost:3001";
-//axios.defaults.baseURL= "https://henrygames-by-mflec.herokuapp.com"
+axios.defaults.baseURL= process.env.REACT_APP_API || "https://henrygames-by-mflec.herokuapp.com";
 
 ReactDOM.render(<React.StrictMode >
     <Provider store={store} >
