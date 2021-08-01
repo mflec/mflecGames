@@ -5,8 +5,8 @@ h1{
 
 .lds-dual-ring {
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    width: 8rem;
+    height: auto;
   }
   .lds-dual-ring:after {
     content: " ";

@@ -54,7 +54,7 @@ function Add() {
           },
           body: JSON.stringify(values)
         }
-        let res = await fetch("http://localhost:3005/videogame", config)
+        let res = await fetch("/videogame", config)
         return alert("The genres are required")
       } catch (error) {
         console.log(error)

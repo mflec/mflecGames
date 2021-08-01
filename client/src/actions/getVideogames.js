@@ -4,8 +4,8 @@ import { SET_VIDEOGAMES } from "./index";
 export default function getVideogames(page) {
     return (dispatch) => {
         let localhost
-        if (page) localhost = `http://localhost:3005/videogames/${page}`
-        if (!page) localhost = `http://localhost:3005/videogames`
+        if (page) localhost = `/videogames/${page}`
+        if (!page) localhost = `/videogames`
         axios.get(localhost)
             .then((response) => {
                 dispatch({ type: SET_VIDEOGAMES, payload: response.data });

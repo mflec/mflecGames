@@ -25,15 +25,14 @@ function Home() {
   let toShow = videogamesToShow ? videogamesToShow : videogames
   let notFound
 
-  if(videogamesToShow && videogamesToShow.length==0) notFound= true
+  if(videogamesToShow && !videogamesToShow.length) notFound= true
   
   return (
     <div id="home">
       <Nav/>
       <Filters id="filters" />
-      
       <Search />
-      {toShow.length===0&& !notFound? <Loanding/>: null }
+      {toShow.length===0 && !notFound? <Loanding/>: null }
       <div>
         {notFound? <NotFound/>: null }
         {toShow.slice(15*page-15, 15*page).map((videogame) =>
@@ -44,7 +43,7 @@ function Home() {
           genres={videogame.genres}
           local={videogame.local}
         />))}
-      </div> <hr />
+      </div>
       <footer>
         {notFound? null: <Pages 
         paginate={paginate} 

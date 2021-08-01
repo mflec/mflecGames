@@ -3,7 +3,7 @@ import { SET_GENRES} from "./index";
 
 export default function getGenres() {
     return (dispatch) => {
-        axios.get(`http://localhost:3005/genres`)
+        axios.get(`/genres`)
             .then((response) => {
                 dispatch({ type: SET_GENRES, payload: response.data })
             })

@@ -1,11 +1,11 @@
 import Home from "./views/Home";
 import { Route, Switch } from "react-router-dom";
 import './styles/App.css';
-import Nav from "./components/Nav";
 import Videogame from "./views/Videogame";
 import Add from "./views/Add";
 import LandingPage from "./views/LandingPage";
 import Error404 from "./views/Error404";
+
 
 
 function App() {

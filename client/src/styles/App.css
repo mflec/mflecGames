@@ -8,19 +8,22 @@
     margin-left: 27.3rem;
     border-style: solid;
     border-width: 1rem;
-    border-color: #ffcccc85;
+    border-color: #000000c4;
 }
 
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    background: linear-gradient(black, black, black, #000099, #66c2ff, #ffcccc, #ffeee6);
+    background: linear-gradient(black, black, #2a242c, #352a38, #614f77, #d2a1f3, #ffeee6);
     background-repeat: no-repeat;
 }
 
 @media (max-width: 75em) {
     html {
         font-size: 60%;
+    }
+    nav{
+        background-color: rgb(0, 0, 0);
     }
 }
 
@@ -156,17 +159,23 @@ input {
 }
 
 .gameCard {
-    border: 1px;
+    border: 0.1px;
     border-style: solid;
     border-color: #000;
     display: inline-block;
     width: 22rem;
     margin: 2rem;
     padding: 0rem, 0rem;
-    color: #000;
+    color: rgb(233, 209, 245);
     text-align: center;
     height: auto;
-    background-color: rgba(221, 186, 238, 0.589);
+    background-color: rgba(0, 0, 0, 0.664)
+}
+
+.gameCard:hover{
+    background-color: rgba(0, 0, 0);
+    color: white;
+    transform: translateY(8px);
 }
 
 #game-cards {
@@ -274,13 +283,16 @@ footer{
     --margin: 6px;
     margin: 0 var(--margin);
     border-radius: 6px;
-    background: #cba6cc;
+    background: rgb(26, 21, 32);
+    color: rgb(233, 209, 245);
     max-width: auto;
     min-width: auto;
     height: 3rem;
     cursor: pointer;
     padding: 0 6px;
-
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-name: letters;
   }
 
 select {
@@ -334,26 +346,26 @@ select {
 
 @keyframes letters {
     20% {
-        color: rgb(148, 118, 189);
+        color: rgb(241, 238, 247);
     }
     40% {
-        color: rgb(77, 61, 100);
+        color: rgb(83, 52, 126);
     }
     60% {
-        color: rgb(65, 50, 87);
+        color: rgb(161, 144, 187);
 
     }
     80% {
-        color: rgb(26, 21, 32);
+        color: rgb(114, 72, 165);
     }
 }
 
 #fullVideogame{
-    border-radius: 0.5rem;
+    border-radius: 0.1rem;
     margin-top: 4rem;
     margin-left: 27.3rem;
     width: 80rem;
     text-align: center;
-    background-color: #ffcccc85 ;
-    color: #000;
+    background-color: #000000c4 ;
+    color: rgb(233, 209, 245);
 }
