@@ -7,7 +7,6 @@ import LandingPage from "./views/LandingPage";
 import Error404 from "./views/Error404";
 
 
-
 function App() {
   return (
     <div>
