@@ -260,18 +260,14 @@ footer{
 }
 
 
-#searchname{
-    margin-left: 45rem;
-    width: 40rem;
-    height: 3rem;
-    background-color: black;
-    color: rgba(221, 186, 238, 0.959);
-    border-color: rgba(221, 186, 238, 0.959);
-}
-
-@media (max-width: 28.75em) {
-    #searchname {
-        margin-left: 0rem;
+@media (min-width: 28.75em) {
+    #searchname{
+        margin-left: 45rem;
+        width: 40rem;
+        height: 3rem;
+        background-color: black;
+        color: rgba(221, 186, 238, 0.959);
+        border-color: rgba(221, 186, 238, 0.959);
     }
 }
 
