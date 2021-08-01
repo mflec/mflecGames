@@ -1,5 +1,7 @@
 const app = require("./src/app");
-const { conn, Genre } = require('./src/db.js');
+const { conn} = require('./src/db.js');
+
+// const {Genre} = require('./src/db.js');
 //const axios = require('axios').default;
 
 
@@ -7,7 +9,7 @@ const { conn, Genre } = require('./src/db.js');
 //const KEY = "0a54940f8789456aa6d405ce652df399";
 
 conn.sync({ force: false }).then(() => {
-    app.listen(process.env.PORT, async() => {
+    app.listen(process.env.PORT, () => {
         /*let apiGenres = await axios.get(`${RAWG_GENRES}?key=${KEY}`);
         apiGenres = await apiGenres.data.results.map(genre => Genre.create({
         name: genre.name,
