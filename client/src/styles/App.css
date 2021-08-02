@@ -197,7 +197,7 @@ input {
 @media (max-width: 28.75em) {
     .gameCard {
         width: 28.749rem;
-        margin-left: 9rem;
+        margin-left: 6rem;
     }
     .image-gameCard {
         width: 28.74rem;
@@ -405,13 +405,13 @@ footer{
 
 @media (max-width: 28.75em) {
     #searchname {
-        margin-left: 7%;
-        width: 80%;
+        margin-left: 6%;
+        width: 92%;
         height: 3rem;
     }
     .homeSearch{
-        margin-left: 7%;
-        font-size: 3.45rem;
+        margin-left: 2rem;
+        font-size: 3.28rem;
     }
 }
 
