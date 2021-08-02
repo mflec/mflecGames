@@ -30,6 +30,12 @@ html {
     }
 }
 
+@media (max-width: 340px) {
+    html {
+        font-size: 45%;
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
@@ -187,10 +193,50 @@ input {
     background-color: rgba(0, 0, 0, 0.664)
 }
 
+@media (max-width: 800px) {
+    .gameCard {
+        margin-left: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gameCard {
+        margin-left: 2rem;
+    }
+}
+
+
+@media (max-width: 680px) {
+    .gameCard {
+        width: 39rem;
+        margin-left: 5rem;
+    }
+    .image-gameCard {
+        width: 39rem;
+    }
+}
+
 @media (max-width: 644px) {
     .gameCard {
         width: 28.749rem;
         margin-left: 9rem;
+    }
+    .image-gameCard {
+        width: 28.749rem;
+    }
+}
+
+
+
+@media(max-width: 640px){
+    .gameCard{
+        margin-left: 18rem;
+    }
+}
+
+@media(max-width: 600px){
+    .gameCard{
+        margin-left: 16.8rem;
     }
 }
 
@@ -200,17 +246,23 @@ input {
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 480px) {
     .gameCard {
-        width: 100%;
-        margin-left: 0rem;
-    }
-    .image-gameCard {
-        width: 100%;
+        margin-left: 11rem;
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 436px) {
+    .gameCard {
+        width: 95%;
+        margin-left: 0rem;
+    }
+    .image-gameCard {
+        width: 95%;
+    }
+}
+
+@media (max-width: 375px) {
     .gameCard {
         width: 28.749rem;
         margin-left: 5.25rem;
@@ -222,11 +274,11 @@ input {
 
 @media (max-width: 320px) {
     .gameCard {
-        width: 100%;
-        margin-left: 0rem;
+        width: 95%;
+        margin-left: 1rem;
     }
     .image-gameCard {
-        width: 100%;
+        width: 95%;
     }
 }
 
@@ -335,7 +387,7 @@ footer{
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .filters-sort{
         margin-left: 5rem;
     }
@@ -372,7 +424,21 @@ footer{
     }
 }
 
-@media (max-width: 290px) {
+@media (max-width: 375px) {
+    .filters-sort{
+        margin-left: 0rem;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .filters-sort{
+        margin-left: 2.5rem;
+    }
+
+}
+
+@media (max-width: 240px) {
     .filters-sort{
         margin-left: 0rem;
     }
@@ -437,16 +503,6 @@ footer{
     }
 }
 
-@media (max-width: 640px) {
-    #searchname{
-        margin-left: 10rem;
-        width: 33rem;
-    }
-    .homeSearch{
-        margin-left: 10rem;
-        font-size: 3rem;
-    }
-}
 
 @media (max-width: 644px) {
     #searchname{
@@ -454,6 +510,27 @@ footer{
     }
     .homeSearch{
         margin-left: 5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    #searchname{
+        margin-left: 14rem;
+        width: 33rem;
+    }
+    .homeSearch{
+        margin-left: 14rem;
+        font-size: 3rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    #searchname{
+        margin-left: 11.5rem;
+    }
+    .homeSearch{
+        margin-left: 11.5rem;
     }
 }
 
@@ -468,19 +545,30 @@ footer{
     }
 }
 
-
-@media (max-width: 414px) {
+@media (max-width:480px){
     #searchname {
         margin-left: 0rem;
         width: 100%;
     }
     .homeSearch{
         margin-left: 0rem;
+        font-size: 4.046rem;
+    }
+}
+
+@media (max-width: 436px) {
+    .homeSearch{
+        font-size: 4.266rem;
+    }
+}
+
+@media (max-width: 414px) {
+    .homeSearch{
         font-size: 4.06rem;
     }
 }
 
-@media (max-width: 411px) {
+@media (max-width: 412px) {
     #searchname {
         margin-left: 0rem;
         width: 100%;
@@ -491,9 +579,15 @@ footer{
     }
 }
 
+@media (max-width: 384px) {
+    .homeSearch{
+        font-size: 3.75rem;
+    }
+}
+
 @media (max-width: 375px) {
     .homeSearch{
-        font-size: 3.66rem;
+        font-size: 3.65rem;
     }
 }
 
@@ -516,17 +610,22 @@ footer{
     }
     .homeSearch{
         margin-left: 0rem;
-        font-size: 3.1rem;
+        font-size: 3.76rem;
     }
 }
 
 
 @media (max-width: 280px) {
     .homeSearch{
-        font-size: 2.69rem;
+        font-size: 3.29rem;
     }
 }
 
+@media (max-width: 240px) {
+    .homeSearch{
+        font-size: 2.77rem;
+    }
+}
 
 
 .pagination\:number {
