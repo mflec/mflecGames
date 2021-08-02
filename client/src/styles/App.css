@@ -54,7 +54,7 @@ body {
     margin: 0;
 }
 
-@media (max-width: 28.75em) {
+@media (max-width: 794px) {
     #add {
         justify-content: center;
         border-color: transparent;
@@ -68,6 +68,7 @@ body {
         margin: 0;
     }
 }
+
 
 a {
     text-decoration: none;
@@ -129,6 +130,14 @@ input {
     margin-right: 2rem;
 }
 
+
+@media(max-width: 1200px){
+    .nav{
+        background-image: none;
+        background-color: black;
+}
+}
+
 @media (max-width: 28.75em) {
     .nav {
         justify-content: center;
@@ -178,16 +187,22 @@ input {
     background-color: rgba(0, 0, 0, 0.664)
 }
 
+@media (max-width: 644px) {
+    .gameCard {
+        width: 28.749rem;
+        margin-left: 9rem;
+    }
+}
+
 @media (max-width: 28.75em) {
     .gameCard {
         width: 28.749rem;
-        margin-left: 5rem;
+        margin-left: 9rem;
     }
     .image-gameCard {
         width: 28.74rem;
     }
 }
-
 
 .gameCard:hover{
     background-color: rgba(0, 0, 0);
@@ -281,6 +296,33 @@ footer{
     width: 2rem;
 }
 
+@media (max-width: 80em) {
+    .filters-sort {
+        margin-left: 27%;
+    }
+}
+
+@media (max-width: 800px) {
+    .filters-sort {
+        margin-left: 20rem;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .filters-sort{
+        margin-left: 10rem;
+    }
+
+}
+
+@media (max-width: 644px) {
+    .filters-sort{
+        margin-left: 5rem;  
+    }
+
+}
+
 @media (max-width: 28.75em) {
     .filters-sort {
         font-size: 2rem;
@@ -288,7 +330,6 @@ footer{
         margin-left: 2.7rem;
         color: rgba(221, 186, 238, 0.959);
     }
-
 }
 
 #searchname{
@@ -314,18 +355,65 @@ footer{
     animation-name: bottoms;
 }
 
-@media (max-width: 28.75em) {
+
+
+@media (max-width: 80em) {
     #searchname{
-        margin-left: 3rem;
-        width: 34rem;
-        height: 3;
+        margin-left: 27%;
+        width: 33rem;
+        height: 3rem;
     }
     .homeSearch{
-        margin-left: 3rem;
+        margin-left: 27%;
         font-size: 3.06rem;
     }
 }
 
+@media (max-width: 800px) {
+    #searchname{
+        margin-left: 20rem;
+        width: 33rem;
+    }
+    .homeSearch{
+        margin-left: 20rem;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    #searchname{
+        margin-left: 10rem;
+        width: 33rem;
+    }
+    .homeSearch{
+        margin-left: 10rem;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 644px) {
+    #searchname{
+        margin-left: 5rem;
+        width: 33rem;
+    }
+    .homeSearch{
+        margin-left: 5rem;
+        font-size: 3rem;
+    }
+}
+
+
+@media (max-width: 28.75em) {
+    #searchname {
+        margin-left: 7%;
+        width: 80%;
+        height: 3rem;
+    }
+    .homeSearch{
+        margin-left: 7%;
+        font-size: 3.45rem;
+    }
+}
 
 .pagination\:number {
     --size: 32px;
@@ -413,6 +501,23 @@ select {
     background-color: #000000c4 ;
     color: rgb(233, 209, 245);
 }
+
+
+@media (max-width: 1060px) {
+    #img-game {
+        width: 100%;
+        margin-top: 12rem;
+        margin-left: 0rem;
+        border-width: 0.3rem;
+    }
+    #fullVideogame{
+        border-radius: 0rem;
+        margin-top: 2rem;
+        margin-left: 0rem;
+        width: 100%;
+    }
+}
+
 
 @media (max-width: 28.75em) {
     #img-game {
