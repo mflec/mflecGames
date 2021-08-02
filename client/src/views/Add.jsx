@@ -3,34 +3,32 @@ import Nav from "../components/Nav";
 
 function Add() {
   let [values, setValues] = React.useState({
-    image: null,
-    name: null,
-    description: null,
-    dateToRelase: null,
-    rating: null,
-    platforms: null,
-    genres: []
+    image: "",
+    name: "",
+    description: "",
+    dateToRelase: "",
+    rating: "",
+    platforms: "",
+    genres: [""]
   });
 
-
   function handleChange(e) {
-    e.preventDefault();
     if (e.target.name == "genres") {
-      setValues(values => ({
+      setValues({
         ...values,
         genres: [...values.genres, e.target.value]
-      }))
+      })
     } else if (e.target.name == "platforms") {
       let arrayPlatforms = e.target.value.split(",")
-      setValues(values => ({
+      setValues({
         ...values,
         platforms: arrayPlatforms
-      }))
+      })
     } else {
-      setValues(values => ({
+      setValues({
         ...values,
         [e.target.name]: e.target.value
-      }))
+      })
     }
   }
 
@@ -66,42 +64,73 @@ function Add() {
       <Nav />
       <h3>ADD A VIDEOGAME</h3>
       <hr />
-      <form onSubmit={(e) => handleSubmit(e)} id="add-form">
+      <form onSubmit={handleSubmit} onChange={handleChange} id="add-form">
         <div >
           <label htmlFor="name" required>
             Name (*) 
           </label>
-          <input onChange={(e) => handleChange(e)} value={values.name} name="name" type="text" className="form-control" />
+          <input  
+          value={values.name} 
+          name="name" 
+          type="text" 
+          className="form-control" 
+          autoComplete="off"
+          />
         </div>
         <div >
           <label htmlFor="description" required>
             Description (*)
           </label>
-          <input onChange={(e) => handleChange(e)} value={values.description} name="description" type="text" className="form-control"  />
+          <input 
+          value={values.description} 
+          name="description" 
+          type="text" 
+          className="form-control" 
+          autoComplete="off"
+           
+          />
         </div>
         <div >
           <label htmlFor="dateToRelase" >
             Release date
           </label>
-          <input onChange={(e) => handleChange(e)} value={values.dateToRelase} name="dateToRelase" type="text" className="form-control" />
+          <input value={values.dateToRelase} 
+          name="dateToRelase"
+           type="text" 
+           className="form-control"
+           autoComplete="off"
+           
+           />
         </div>
         <div >
           <label htmlFor="rating" >
             Rating
           </label>
-          <textarea onChange={(e) => handleChange(e)} value={values.rating} name="rating" className="form-control"></textarea>
+          <input 
+          value={values.rating} 
+          name="rating" 
+          className="form-control"
+          autoComplete="off"
+          
+          ></input>
         </div>
         <div >
           <label htmlFor="platforms">
             Platforms (*)
           </label>
-          <textarea onChange={(e) => handleChange(e)} value={values.plataforms} name="platforms" className="form-control" ></textarea>
+          <input 
+          value={values.plataforms} 
+          name="platforms" 
+          className="form-control" 
+          autoComplete="off"
+          
+          ></input>
         </div>
         <div >
           <label htmlFor="genres">
             <span>Genre(s)</span>
           </label>
-          <select onChange={(e) => handleChange(e)} name="genres" id='genres' multiple>
+          <select name="genres" multiple>
             <option value="4">Action</option>
             <option value="51">Indie</option>
             <option value="3">Adventure</option>
@@ -127,7 +156,13 @@ function Add() {
           <label htmlFor="image" >
             Descriptive image(URL)
           </label>
-          <input onChange={(e) => handleChange(e)} value={values.image} name="image" type="url" className="form-control" />
+          <input 
+          value={values.image} 
+          name="image" 
+          type="url"
+          className="form-control" 
+          autoComplete="off"
+          />
         </div>
         <div >
           <input type="submit" value="Subir a la plataforma" id="submit"></input>

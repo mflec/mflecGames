@@ -9,7 +9,7 @@ export default function Search() {
   let { name } = input.name
 
   function handleChange(e) {
-    setInput({ name: e.target.value })
+    setInput({ [e.target.name]: e.target.value })
     if (!input.name) {
       dispatch(getVideogames())
     } else {
@@ -27,8 +27,8 @@ export default function Search() {
         name="name"
         type="text"
         id="searchname"
-        autoComplete="off"
         value={name}
+        autoComplete="off"
         onChange={(e) => handleChange(e)} />
     </form>
   </div>)
