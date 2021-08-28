@@ -9,15 +9,15 @@ Development of a SPA using React for the Front End, and Redux as stage managemen
 ![alt text](https://github.com/mflec/mflecGames/blob/master/Landing.png?raw=true)
 
 
-#Home
+# Home
 
 ![alt text](https://github.com/mflec/mflecGames/blob/master/Home.png?raw=true)
 
-#Videogame Description
+# Videogame Description
 
 ![alt text](https://github.com/mflec/mflecGames/blob/master/Agame.png?raw=true)
 
 ![alt text](https://github.com/mflec/mflecGames/blob/master/Game%20description.png?raw=true)
 
-#Form
+# Form
 ![alt text](https://github.com/mflec/mflecGames/blob/master/Add%20a%20game.png?raw=true)
