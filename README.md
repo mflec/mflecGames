@@ -4,5 +4,3 @@ Development of a SPA using React for the Front End, and Redux as stage managemen
 - Search cache
 - Sorting, and filters
 - Control form for creating video games.
-
-![alt text](http://url/to/Landing.png)
