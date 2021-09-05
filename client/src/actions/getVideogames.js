@@ -11,9 +11,6 @@ export default function getVideogames(page) {
                 dispatch({ type: SET_VIDEOGAMES, payload: response.data });
             })
             .catch(error => {
-                if (error.response.status === 404) {
-                    return dispatch({ type: SET_VIDEOGAMES, payload: undefined })
-                }
                 alert("Ups!!! 😥")
             });
     }

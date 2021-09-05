@@ -8,9 +8,6 @@ export default function getVideogame(idGame) {
                 dispatch({ type: SET_VIDEOGAME, payload: response.data })
             })
             .catch(error => {
-                if (error.response.status === 404) { //un cambio
-                    return dispatch({ type: SET_VIDEOGAME, payload: undefined })
-                }
                 alert("Ups!!! 😥")
             });
     };

@@ -8,9 +8,6 @@ export default function getGenres() {
                 dispatch({ type: SET_GENRES, payload: response.data })
             })
             .catch(error => {
-                if (error.response.status === 404) { //un cambio
-                    return dispatch({ type: SET_GENRES, payload: undefined })
-                }
                 alert("Ups!!! 😥")
             });
     };
