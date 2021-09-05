@@ -206,6 +206,7 @@ input {
     align-items: center;
 }
 
+
 .games-container {
     width: 100%;
     align-items: center;
@@ -379,7 +380,7 @@ select {
     }
     60% {
         color: rgb(161, 144, 187);
-
+        
     }
     80% {
         color: rgb(114, 72, 165);
@@ -434,5 +435,17 @@ select {
         margin-top: 2rem;
         margin-left: 0rem;
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gameCard{
+        width: 85%;
+    }
+    .gameCard {
+        width: 85%;
+    }
+    #searchname, .homeSearch{
+        width: 90%;
     }
 }
