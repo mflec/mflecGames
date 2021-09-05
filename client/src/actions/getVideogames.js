@@ -1,5 +1,6 @@
 import axios from "axios";
 import { SET_VIDEOGAMES } from "./index";
+import Swal from "sweetalert2";
 
 export default function getVideogames(page) {
     return (dispatch) => {
@@ -11,7 +12,13 @@ export default function getVideogames(page) {
                 dispatch({ type: SET_VIDEOGAMES, payload: response.data });
             })
             .catch(error => {
-                alert("Ups!!! 😥")
+                console.log(error)
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...😥',
+                    text: 'Something went wrong! 😕',
+                    footer: '<h3> Please come back in later 😁 </h3>'
+                  })
             });
     }
 }

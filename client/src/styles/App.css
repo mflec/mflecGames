@@ -5,7 +5,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    background: linear-gradient(black, black, #2a242c, #352a38, #614f77, #d2a1f3, #ffeee6, rgb(255, 255, 255));
+    background-color: #000000;
     background-repeat: no-repeat;
 }
 
@@ -64,14 +64,11 @@ body {
 @media (max-width: 794px) {
     #add {
         justify-content: center;
-        border-color: transparent;
-        border-style: solid;
         border-width: 15rem 0rem 0px;
         font-family: 'Poppins', sans-serif;
         font-size: 1.5rem;
         font-weight: 400;
         line-height: 1.4;
-        color: rgb(255, 255, 255);
         margin: 0;
     }
 }
@@ -86,6 +83,7 @@ a {
     background: rgba(65, 50, 87, 0.623);
     padding: 2.5rem 0.625rem;
     border-radius: 0.6rem;
+    box-shadow: 0 0 10rem #614f77;;
 }
 
 @media (min-width: 480px) {
@@ -183,7 +181,7 @@ input {
 .gameCard {
     border: 0.1px;
     border-style: solid;
-    border-color: #000;
+    border-color: #614f77;
     display: inline-block;
     width: 22rem;
     margin: 2rem;
@@ -191,13 +189,13 @@ input {
     color: rgb(233, 209, 245);
     text-align: center;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.664)
+    background-color: transparent;
+    box-shadow:0 0 5rem #614f77;
 }
 
 .gameCard:hover{
-    background-color: rgba(0, 0, 0);
     color: white;
-    transform: translateY(8px);
+    transform: translateY(2rem);
 }
 
 #game-cards {
@@ -297,7 +295,8 @@ footer{
     height: 3rem;
     background-color: black;
     color: rgba(221, 186, 238, 0.959);
-    border-color: rgba(221, 186, 238, 0.959);
+    border-color: #614f77;
+    box-shadow:0 0 8rem #614f77;
 }
 
 .homeSearch{
@@ -309,7 +308,7 @@ footer{
     font-variant: small-caps;
     animation-iteration-count: infinite;
     animation-duration: 0.5s;
-    animation-name: bottoms;
+    animation-name: letters;
 }
 
 #searchh{
@@ -371,6 +370,16 @@ select {
     height: auto;
 }
 
+#add-tittle{
+    text-align: center;
+    font-size: 4rem;
+    font-style: inherit;
+    color: rgba(221, 186, 238, 0.959);    
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-name: letters;
+}
+
 @keyframes letters {
     20% {
         color: rgb(241, 238, 247);
@@ -393,7 +402,8 @@ select {
     margin-left: 27.3rem;
     border-style: solid;
     border-width: 1rem;
-    border-color: #000000c4;
+    border-color: transparent;
+    box-shadow:0 0 7rem #614f77;
 }
 
 #fullVideogame{
@@ -402,7 +412,9 @@ select {
     margin-left: 27.3rem;
     width: 80rem;
     text-align: center;
-    background-color: #000000c4 ;
+    background-color: transparent ;
+    border-color: #614f779d;
+    box-shadow:0 0 7rem #614f77;
     color: rgb(233, 209, 245);
 }
 
@@ -449,3 +461,4 @@ select {
         width: 90%;
     }
 }
+

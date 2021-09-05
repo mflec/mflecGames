@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "../components/Nav";
+import Swal from "sweetalert2";
 
 function Add() {
   let [values, setValues] = React.useState({
@@ -35,13 +36,13 @@ function Add() {
   async function handleSubmit(e) {
     e.preventDefault();
     if (!values.name) {
-      return alert("A name is required")
+      return Swal.fire("A name is required")
     }
     if (!values.description) {
-      return alert("A description is required")
+      return Swal.fire("A description is required")
     }
     if (!values.platforms) {
-      return alert("Successfully created videogame")
+      return Swal.fire("Successfully created videogame")
     }else {
       try {
         let config = {
@@ -53,17 +54,28 @@ function Add() {
           body: JSON.stringify(values)
         }
         await fetch("https://henrygames-by-mflec.herokuapp.com/videogame", config)
-        return alert("Created videogame")
+        return Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Your work has been saved',
+          showConfirmButton: false,
+          timer: 1500
+        })
       } catch (error) {
         console.log(error)
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...😥',
+          text: 'Something went wrong! 😕',
+          footer: '<h3> Please try again later 😁 </h3>'
+        })
       }
     }
   }
   return (
     <div id="add">
       <Nav />
-      <h3>ADD A VIDEOGAME</h3>
-      <hr />
+      <h3 id="add-tittle">ADD A VIDEOGAME</h3>
       <form onSubmit={handleSubmit} onChange={handleChange} id="add-form">
         <div >
           <label htmlFor="name" required>
