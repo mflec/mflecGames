@@ -17,10 +17,10 @@ export default function Search() {
     }
   }
   
-  return (<div>
+  return (<p id='searchh'>
     <form>
       <label htmlFor="searchName" className="homeSearch">
-        search a game by name
+      search a game by name
       </label>
       <br/>
       <input
@@ -31,5 +31,5 @@ export default function Search() {
         autoComplete="off"
         onChange={(e) => handleChange(e)} />
     </form>
-  </div>)
+  </p>)
 }

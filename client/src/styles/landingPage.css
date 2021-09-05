@@ -11,21 +11,21 @@
 }
 
 #welcome{
-	font-size: 5rem;
+	font-size: 9rem;
 	color: rgb(221, 195, 221);
-	animation-iteration-count: infinite;
-    animation-duration: 1s;
-    animation-name: bottoms;
+	/* offset-x | offset-y | blur-radius | color */
+	border-color:rgb(255, 255, 255);
+    box-shadow:1rem 1rem 10px rgb(255, 255, 255);
 	font-variant: small-caps;
 }
 
 #to-click{
-	font-size: 4rem;
+	font-size: 3rem;
 	color: rgb(221, 195, 221);
 	animation-iteration-count: infinite;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-name: bottoms;
-	margin-bottom: 10rem;
+	margin-bottom: 7rem;
 	font-variant: small-caps;
 }
 

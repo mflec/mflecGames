@@ -33,7 +33,7 @@ function Home() {
       <Filters id="filters" />
       <Search />
       {toShow.length===0 && !notFound? <Loanding/>: null }
-      <div>
+      <p>
         {notFound? <NotFound/>: null }
         {toShow.slice(15*page-15, 15*page).map((videogame) =>
         (<GameCard
@@ -43,7 +43,7 @@ function Home() {
           genres={videogame.genres}
           local={videogame.local}
         />))}
-      </div>
+      </p>
       <footer>
         {notFound? null: <Pages 
         paginate={paginate} 

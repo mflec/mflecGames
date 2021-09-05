@@ -44,6 +44,7 @@ body {
 }
 
 #home{
+    text-align: center;
     margin-top: 13rem;
 }
 
@@ -193,95 +194,6 @@ input {
     background-color: rgba(0, 0, 0, 0.664)
 }
 
-@media (max-width: 800px) {
-    .gameCard {
-        margin-left: 4rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .gameCard {
-        margin-left: 2rem;
-    }
-}
-
-
-@media (max-width: 680px) {
-    .gameCard {
-        width: 39rem;
-        margin-left: 5rem;
-    }
-    .image-gameCard {
-        width: 39rem;
-    }
-}
-
-@media (max-width: 644px) {
-    .gameCard {
-        width: 28.749rem;
-        margin-left: 9rem;
-    }
-    .image-gameCard {
-        width: 28.749rem;
-    }
-}
-
-
-
-@media(max-width: 640px){
-    .gameCard{
-        margin-left: 18rem;
-    }
-}
-
-@media(max-width: 600px){
-    .gameCard{
-        margin-left: 16.8rem;
-    }
-}
-
-@media (max-width: 540px) {
-    .gameCard {
-        margin-left: 12.87rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .gameCard {
-        margin-left: 11rem;
-    }
-}
-
-@media (max-width: 436px) {
-    .gameCard {
-        width: 95%;
-        margin-left: 0rem;
-    }
-    .image-gameCard {
-        width: 95%;
-    }
-}
-
-@media (max-width: 375px) {
-    .gameCard {
-        width: 28.749rem;
-        margin-left: 5.25rem;
-    }
-    .image-gameCard {
-        width: 28.74rem;
-    }
-}
-
-@media (max-width: 320px) {
-    .gameCard {
-        width: 95%;
-        margin-left: 1rem;
-    }
-    .image-gameCard {
-        width: 95%;
-    }
-}
-
 .gameCard:hover{
     background-color: rgba(0, 0, 0);
     color: white;
@@ -360,13 +272,18 @@ footer{
 
 .filters-sort{
     font-variant: small-caps;
-    margin-left: 35rem;
     display: flex;
+    flex-direction: row;
     color: rgba(221, 186, 238, 0.959);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 #filters{
-    margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 #orderRating, #order, #genres{
@@ -374,79 +291,7 @@ footer{
     width: 2rem;
 }
 
-@media (max-width: 80em) {
-    .filters-sort {
-        margin-left: 27%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .filters-sort {
-        margin-left: 20rem;
-    }
-
-}
-
-@media (max-width: 800px) {
-    .filters-sort{
-        margin-left: 5rem;
-    }
-
-}
-
-@media (max-width: 640px) {
-    .filters-sort{
-        margin-left: 10rem;
-    }
-
-}
-
-@media (max-width: 644px) {
-    .filters-sort{
-        margin-left: 5rem;  
-    }
-
-}
-
-@media (max-width: 540px) {
-    .filters-sort{
-        margin-left: 2rem;
-    }
-
-}
-
-@media (max-width: 28.75em) {
-    .filters-sort {
-        font-size: 2rem;
-        font-variant: small-caps;
-        margin-left: 2.7rem;
-        color: rgba(221, 186, 238, 0.959);
-    }
-}
-
-@media (max-width: 375px) {
-    .filters-sort{
-        margin-left: 0rem;
-    }
-
-}
-
-@media (max-width: 360px) {
-    .filters-sort{
-        margin-left: 2.5rem;
-    }
-
-}
-
-@media (max-width: 240px) {
-    .filters-sort{
-        margin-left: 0rem;
-    }
-
-}
-
 #searchname{
-    margin-left: 45rem;
     width: 40rem;
     height: 3rem;
     background-color: black;
@@ -455,10 +300,8 @@ footer{
 }
 
 .homeSearch{
-    margin-left: 45rem;
-    width: 40rem;
-    height: 3rem;
     font-size: 3.6rem;
+    width: auto;
     background-color: transparent;
     color: rgba(221, 186, 238, 0.959);
     border-color: rgba(221, 186, 238, 0.959);
@@ -468,165 +311,10 @@ footer{
     animation-name: bottoms;
 }
 
-
-
-@media (max-width: 80em) {
-    #searchname{
-        margin-left: 27%;
-        width: 33rem;
-        height: 3rem;
-    }
-    .homeSearch{
-        margin-left: 27%;
-        font-size: 3.06rem;
-    }
+#searchh{
+    width: 100%;
+    text-align: center;
 }
-
-@media (max-width: 1024px) {
-    #searchname{
-        margin-left: 33rem;
-    }
-    .homeSearch{
-        margin-left: 33rem;
-        font-size: 2.96rem;
-    }
-}
-
-@media (max-width: 800px) {
-    #searchname{
-        margin-left: 20rem;
-        width: 33rem;
-    }
-    .homeSearch{
-        margin-left: 20rem;
-        font-size: 2.97rem;
-    }
-}
-
-
-@media (max-width: 644px) {
-    #searchname{
-        margin-left: 5rem;
-    }
-    .homeSearch{
-        margin-left: 5rem;
-    }
-}
-
-@media (max-width: 640px) {
-    #searchname{
-        margin-left: 14rem;
-        width: 33rem;
-    }
-    .homeSearch{
-        margin-left: 14rem;
-        font-size: 3rem;
-    }
-}
-
-
-@media (max-width: 600px) {
-    #searchname{
-        margin-left: 11.5rem;
-    }
-    .homeSearch{
-        margin-left: 11.5rem;
-    }
-}
-
-@media (max-width: 540px) {
-    #searchname{
-        margin-left: 9rem;
-        width: 33rem;
-    }
-    .homeSearch{
-        margin-left: 9rem;
-        font-size: 2.97rem;
-    }
-}
-
-@media (max-width:480px){
-    #searchname {
-        margin-left: 0rem;
-        width: 100%;
-    }
-    .homeSearch{
-        margin-left: 0rem;
-        font-size: 4.046rem;
-    }
-}
-
-@media (max-width: 436px) {
-    .homeSearch{
-        font-size: 4.266rem;
-    }
-}
-
-@media (max-width: 414px) {
-    .homeSearch{
-        font-size: 4.06rem;
-    }
-}
-
-@media (max-width: 412px) {
-    #searchname {
-        margin-left: 0rem;
-        width: 100%;
-    }
-    .homeSearch{
-        margin-left: 0rem;
-        font-size: 4.02rem;
-    }
-}
-
-@media (max-width: 384px) {
-    .homeSearch{
-        font-size: 3.75rem;
-    }
-}
-
-@media (max-width: 375px) {
-    .homeSearch{
-        font-size: 3.65rem;
-    }
-}
-
-@media (max-width: 360px) {
-    #searchname {
-        margin-left: 6%;
-        width: 92%;
-        height: 3rem;
-    }
-    .homeSearch{
-        margin-left: 2rem;
-        font-size: 3.28rem;
-    }
-}
-
-@media (max-width: 320px) {
-    #searchname {
-        margin-left: 0rem;
-        width: 100%;
-    }
-    .homeSearch{
-        margin-left: 0rem;
-        font-size: 3.76rem;
-    }
-}
-
-
-@media (max-width: 280px) {
-    .homeSearch{
-        font-size: 3.29rem;
-    }
-}
-
-@media (max-width: 240px) {
-    .homeSearch{
-        font-size: 2.77rem;
-    }
-}
-
 
 .pagination\:number {
     --size: 32px;
@@ -640,10 +328,12 @@ footer{
     height: 3rem;
     cursor: pointer;
     padding: 0 6px;
-    animation-iteration-count: infinite;
-    animation-duration: 0.5s;
-    animation-name: letters;
-  }
+}
+
+.pagination\:number:hover{
+    background-color: rgb(233, 209, 245);
+    color: rgb(26, 21, 32);
+}
 
 select {
     background-color: #ffcccc62;
