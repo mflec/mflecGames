@@ -39,19 +39,12 @@ router.get('/', async (req, res) => {
     let callApi2 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=2`);
     let callApi3 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=3`);
     let callApi4 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=4`);
-    let callApi5 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=5`);
-    let callApi6 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=6`);
-    let callApi7 = await axios.get(`${RAWGGAMES}?key=${KEY}&page=7`);
 
-    externalGames = await [
+    externalGames = [
       ...callApi1.data.results, 
       ...callApi2.data.results, 
       ...callApi3.data.results,
       ...callApi4.data.results, 
-      ...callApi5.data.results, 
-      ...callApi6.data.results, 
-      ...callApi7.data.results, 
-
     ]
     localGames = await Videogame.findAll({
       include: {
@@ -75,7 +68,7 @@ router.get('/', async (req, res) => {
       local: false
     }));
 
-    totalGames = await [...localGames, ...externalGames]
+    totalGames = [...localGames, ...externalGames]
     return res.json(totalGames);
 
   } catch (error) {
