@@ -1,12 +1,12 @@
 import React from "react";
-import Filters from "./Filters";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <nav role="navigation" className="nav">
       <div class="nav-list">
-        <a href="/home" className="Link"> home </a>
-        <a href="/videogame" className="Link"> add a videogame </a>
+        <Link to="/home" className="Link"> home </Link>
+        <Link to="/videogame" className="Link"> add a videogame </Link>
       </div>
     </nav>
   );
